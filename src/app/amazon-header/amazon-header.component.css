@@ -1,0 +1,36 @@
+.header{
+    display: flex;
+    margin-top: 25px;
+    margin-left: 25px;
+    justify-content: space-between; 
+    
+}
+
+.logo{
+   margin-top: 6px;
+   margin-left: 30px;
+}
+
+.search{
+    margin-left: 15px;
+    width: 700px;
+}
+
+.theme-selector{
+    margin-left: 15px;
+}
+
+.header-start{
+    display: flex;
+    margin-right: 10px;
+}
+
+.header-end {
+    display: flex;
+    margin-right: 20px;
+}
+
+/* .logo{
+    display: flex;
+    justify-content: flex-start;
+} */

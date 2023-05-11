@@ -1,0 +1,53 @@
+<div class="mobile">
+    <div class="selectMobile">
+        <div class="mobile-brand">
+            <awc-select
+                [disabled]=false
+                placeholder="Select Brand"
+                [items]="mobileBrandItems"
+                itemToDispalyed=100
+                (selectionChanged)="brandSelected($event)"
+                >
+            </awc-select>
+        </div>
+        <div class="mobile-model">
+            <awc-select 
+                [disabled]="mdisable" 
+                placeholder="Select Model"
+                [items]="mobileModelItems"
+                (selectionChanged)="modelSelected($event)"
+                >
+    
+            </awc-select>
+        </div>
+    </div>
+    <div class="showDescription">
+        <awc-card
+            >
+            <awc-list
+                [items]="phoneDetails">
+
+            </awc-list>
+
+            <awc-button
+                text="Show Image"
+                (clicked)="showMobileImage"
+                >
+
+            </awc-button>
+
+            <ng-template 
+                #showMobileImage>
+                <awc-popout
+                    [id]="'centered'"
+                    [direction]="popoutDirection"
+                    [borderRadius]="popoutBorderRadius"
+                    [elevation]="popoutElevation"
+                    >
+
+                </awc-popout>
+            </ng-template>
+        </awc-card>
+    </div>
+    
+</div>

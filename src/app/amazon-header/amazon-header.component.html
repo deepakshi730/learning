@@ -1,0 +1,65 @@
+<div class="header">
+    <div class="header-start">
+
+        <div class="category">
+            <awc-button
+                #showCategoryAnchor
+                [prefixIcon]="category_icon"
+                [text]="category_text"
+                (clicked)="showCategory()">
+
+            </awc-button>
+            <awc-menu
+                    #showCategoryMenu
+                    id="show-category"
+                    [items]="items"
+                    [position]="position"
+                    [isOpen]=false
+                    [width]="200"
+                >
+
+                </awc-menu>
+            
+        </div>
+        <div class="logo" >
+            <awc-icon [icon]="icon" [size]="icon_size"></awc-icon>
+        </div>
+
+    </div>
+    
+    <div class="search" >
+        <awc-input 
+            [disabled]="search_disabled" 
+            [placeholder]="search_placeholder" 
+            [suffixStandard]="search_icon_suffix">
+        </awc-input>
+    </div>
+    
+    <div class="header-end">
+        <div class="theme-selector">
+            <awc-button
+                [iconOnly]=true
+                awctooltip="Toogle Theme"
+                [prefixIcon]="theme_icon"
+                (clicked)="toogleTheme()">
+    
+            </awc-button>
+        </div>
+
+        <div class="cart" >
+            <awc-button
+                [prefixIcon]="cart_icon"
+                [text]="cart_text">
+    
+            </awc-button>
+        </div>
+        <div class="login" >
+            <awc-button 
+                [text]="login_text"
+                >
+            </awc-button>
+        </div>
+    </div>
+    
+    
+</div>

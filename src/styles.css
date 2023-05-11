@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@ansys/awc-angular/design/styles/awc";
+@import "@ansys/awc-angular/design/styles/doc-overloads/index.css";
+@import "@ansys/awc-angular/design/styles/themes/css/default.css";
+
+/* You can add global styles to this file, and also import other style files */
+:root.light {
+    /* --awc-theme-surface-primary-default: #ffa500;
+  --awc-theme-surface-primary-dark: #cc8400; */
+    --awc-component-button-type-primary-resting-container-background-color: var(--awc-theme-global-transparent);
+    --awc-component-button-type-primary-resting-content-label-text-color: var(--awc-theme-text-neutral-default);
+    --awc-component-button-type-primary-hover-container-background-color: var(--awc-theme-surface-neutral-dark);
+    --awc-component-button-type-primary-pressed-container-background-color: var(--awc-theme-surface-neutral-darker);
+    --awc-component-button-type-primary-active-container-background-color: var(--awc-theme-surface-primary-lightest);
+
+
+    /* --awc-component-button-type-tertiary-resting-container-background-color: var(--awc-theme-global-transparent);
+  --awc-component-button-type-tertiary-resting-content-label-text-color: var(--awc-theme-text-neutral-default);
+  --awc-component-button-type-tertiary-hover-container-background-color: var(--awc-theme-surface-neutral-dark);
+  --awc-component-button-type-tertiary-pressed-container-background-color: var(--awc-theme-surface-neutral-darker);
+  --awc-component-button-type-tertiary-active-container-background-color: var(--awc-theme-surface-primary-lightest);
+  --awc-component-button-type-tertiary-active-content-leading-icon-color: var(--awc-theme-text-primary-default);
+  --awc-component-button-type-tertiary-active-content-label-text-color: var(--awc-theme-text-primary-default);
+  --awc-component-button-type-tertiary-active-content-trailing-icon-color: var(--awc-theme-text-primary-default);
+  --awc-component-button-type-tertiary-active-content-dropdown-icon-color: var(--awc-theme-text-primary-default);
+  --awc-component-button-type-tertiary-active-content-active-icon-color: var(--awc-theme-text-primary-default); */
+}
+
+:root.dark {
+    --awc-component-button-type-primary-resting-container-background-color: var(--awc-theme-global-transparent);
+    --awc-component-button-type-primary-resting-content-label-text-color: var(--awc-theme-text-neutral-default);
+    --awc-component-button-type-primary-hover-container-background-color: var(--awc-theme-surface-neutral-dark);
+    --awc-component-button-type-primary-pressed-container-background-color: var(--awc-theme-surface-neutral-darker);
+    --awc-component-button-type-primary-active-container-background-color: var(--awc-theme-surface-primary-lightest);
+
+
+}

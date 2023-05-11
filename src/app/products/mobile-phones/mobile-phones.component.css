@@ -1,0 +1,24 @@
+.mobile{
+    
+    margin-top: 20px;
+    
+}
+.selectMobile{
+    display: flex;
+    justify-content: center;
+}
+.mobile-brand{
+    margin: 20px;
+    width: 450px;
+}
+.mobile-model{
+    margin: 20px;
+    width: 450px;
+}
+
+.showDescription{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+}
