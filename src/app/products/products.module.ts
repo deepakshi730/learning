@@ -15,11 +15,12 @@ import { CardComponent } from '@ansys/awc-angular/panels';
 import { ListComponent } from '@ansys/awc-angular/lists';
 import { PopoutComponent } from '@ansys/awc-angular/popups';
 import { ProductsRoutingModule } from './products-routing.module';
+import { BooksComponent } from './books/books.component';
 
 
 
 @NgModule({
-  declarations: [MobilePhonesComponent],
+  declarations: [MobilePhonesComponent, BooksComponent],
   
   imports: [
     CommonModule,

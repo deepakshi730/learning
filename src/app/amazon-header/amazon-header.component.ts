@@ -62,16 +62,19 @@ export class AmazonHeaderComponent {
         leading: Icons.PHONE,
       },
       execute: () =>{
-        this.router.navigate(['/phones']);
+        this.router.navigate(['/phones/descrip']);
       },
       
     },
     {
       id:"item2",
-      text:"sample2",
+      text:"Books",
       icons:{
-        leading: Icons.ACCOUNT,
-      }
+        leading: Icons.LIST,
+      },
+      execute: () =>{
+        this.router.navigate(['/books/lists']);
+      },
     }
   
   ]
