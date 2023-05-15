@@ -17,12 +17,14 @@ import { SelectComponent } from '@ansys/awc-angular/forms';
 import { CardComponent } from '@ansys/awc-angular/panels';
 import { ListComponent } from '@ansys/awc-angular/lists';
 import { PopoutComponent } from '@ansys/awc-angular/popups';
+import { AmazonHomeComponent } from './amazon-home/amazon-home.component';
 //import { LogoComponent } from '@ansys/awc-angular/images';
 
 @NgModule({
   declarations: [
     AppComponent,
     AmazonHeaderComponent,
+    AmazonHomeComponent,
     //MobilePhonesComponent,
     
   ],
