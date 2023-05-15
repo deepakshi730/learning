@@ -2,10 +2,13 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  ElementRef,
+  ViewChild,
 } from '@angular/core';
+import { ButtonComponent } from '@ansys/awc-angular/buttons';
 import { BorderRadius, ElevationSize } from '@ansys/awc-angular/core';
 import { AWCListItem } from '@ansys/awc-angular/lists';
-import { PopoutDirection } from '@ansys/awc-angular/popups';
+import { PopoutComponent, PopoutDirection } from '@ansys/awc-angular/popups';
 import { AmazonService } from '../../amazon.service';
 
 @Component({
@@ -17,6 +20,8 @@ export class MobilePhonesComponent {
   mobileBrandItems: AWCListItem[] = [];
   mobileModelItems: AWCListItem[] = [];
   phoneDetails: AWCListItem[] = [];
+  @ViewChild('popoutRef', {static: true}) public popoutRef!: PopoutComponent;
+  @ViewChild('btnRef', { read: ElementRef } ) public btnRef!:ElementRef;
   brand = '';
   model = '';
   bSelected: boolean = false;
@@ -73,5 +78,13 @@ export class MobilePhonesComponent {
       });
   }
 
+  showImage(event:any){
+    console.log(event);
+    setTimeout(() => {
+      console.log("hiii");
+      this.popoutRef.setAnchor(this.btnRef.nativeElement);
+      this.popoutRef.open();
+    }, 100);
+  }
   
 }

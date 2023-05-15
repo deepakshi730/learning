@@ -29,24 +29,30 @@
 
             </awc-list>
 
-            <awc-button
+            <div class="show-image-btn">
+                <awc-button
                 text="Show Image"
-                (clicked)="showMobileImage"
+                (clicked)="showImage($event)"
+                #btnRef
                 >
 
             </awc-button>
+            </div>
+            
 
-            <ng-template 
-                #showMobileImage>
+            <!-- <ng-template 
+                #showMobileImage> -->
                 <awc-popout
+                    
                     [id]="'centered'"
                     [direction]="popoutDirection"
                     [borderRadius]="popoutBorderRadius"
                     [elevation]="popoutElevation"
+                    #popoutRef
                     >
-
+<h1>hii</h1>
                 </awc-popout>
-            </ng-template>
+            <!-- </ng-template> -->
         </awc-card>
     </div>
     
