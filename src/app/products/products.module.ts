@@ -16,9 +16,10 @@ import { ListComponent } from '@ansys/awc-angular/lists';
 import { PopoutComponent } from '@ansys/awc-angular/popups';
 import { ProductsRoutingModule } from './products-routing.module';
 import { BooksComponent } from './books/books.component';
-
-
-
+import { TextareaComponent } from '@ansys/awc-angular/forms';
+import { ChipComponent } from '@ansys/awc-angular/chips';
+import { ImageComponent } from '@ansys/awc-angular/image';
+import { ButtonLinkComponent } from '@ansys/awc-angular/buttons';
 @NgModule({
   declarations: [MobilePhonesComponent, BooksComponent],
   
@@ -36,6 +37,10 @@ import { BooksComponent } from './books/books.component';
     CardComponent,
     ListComponent,
     PopoutComponent,
+    TextareaComponent,
+    ChipComponent,
+    ImageComponent,
+    ButtonLinkComponent,
   ]
 })
 export class ProductsModule { }

@@ -1,0 +1,68 @@
+.books{
+    margin-top: 20px;
+}
+.best-seller-list{
+    display: flex;
+    justify-content: center;
+}
+.select-best-seller{
+    margin-top: 30px;
+    width: 600px;
+}
+.books-container{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+.books-chip{
+    margin-top: 15px;
+}
+.book-details{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.books-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.best-seller-items{
+    padding: 10px;
+    margin: 10px;
+    
+}
+.block-display{
+    display: none;
+}
+.book-details{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.best-seller-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-item{
+    display: flex;
+    justify-content: space-evenly;
+}
+.book-image{
+    flex: 1;
+}
+.book-details{
+    flex: 3;
+}
+.books-buy-link{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.hide-descript{
+    display: none;
+}

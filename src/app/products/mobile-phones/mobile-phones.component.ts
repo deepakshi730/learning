@@ -52,7 +52,7 @@ export class MobilePhonesComponent {
     this.amazon
       .getMobileSpecifications(this.brand, this.model)
       .subscribe((item) => {
-        console.log(item);
+        //console.log(item);
         this.phoneDetails = [
           {
             id: item.brand,

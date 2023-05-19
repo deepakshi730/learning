@@ -1,1 +1,97 @@
-<p>books works!</p>
+<div class="books">
+  <div class="best-seller-list">
+    <div class="select-best-seller">
+      <awc-select
+        [disabled]="false"
+        placeholder="Select Publisher"
+        [items]="bestSellerLists"
+        itemToDispalyed="100"
+        (selectionChanged)="bestSellerSelected($event)"
+      >
+      </awc-select>
+    </div>
+  </div>
+
+  <div class="books-container">
+    <ng-container *ngFor="let _bestSeller of bestSeller; let i = index">
+      <div
+        [ngClass]="
+          bestSellerCounter == i || selectedBestSeller == _bestSeller.bestSeller ? 'best-seller-items' : 'block-display'
+        "
+      >
+        <awc-card [elevation]="bestSellerCardElevation" [padding]="cardPadding" [borderRadius]="bestSellerBorderRadius">
+          <div class="best-seller-header">
+            <div class="list-name">
+              <awc-textarea
+                [isEditing]="false"
+                label="Best Seller"
+                placeholder="No Best Seller"
+                value="{{ _bestSeller.bestSeller }}"
+              >
+              </awc-textarea>
+            </div>
+
+            <div>
+              <awc-button
+                [iconOnly]="true"
+                awctooltip="Next"
+                [prefixIcon]="next_icon"
+                (clicked)="nextBestSeller()"
+              >
+              </awc-button>
+            </div>
+          </div>
+
+          <div class="books-chip">
+            <awc-chip name="Top 5 Books" [readOnly]="false" value="top5Books">
+            </awc-chip>
+          </div>
+
+          <div class="book-details">
+            <ng-container *ngFor="let books of _bestSeller.books">
+              <awc-card [elevation]="bookCardElevation" [padding]="cardPadding">
+                <div class="book-item">
+                    <div class="book-image">
+                        <awc-image
+                            src={{books.bookImg}}
+                            [width]="'200'"
+                            [height]="'300'"
+                        >
+                        </awc-image>
+                    </div>
+                    <div class="book-details">
+                        <h4 style="color:aquamarine">{{books.title}}</h4>
+                        <i>by {{books.author}} | {{books.createdDate}}</i> 
+                        <br>
+                        <h5>${{books.price}}</h5>
+                        <div>
+                          <awc-button
+                            text="...More"  
+                            (clicked)="showDescription()"
+                          ></awc-button>
+                        </div>
+                        <p [ngClass]="showDescrip ? 'show-descript' : 'hide-descript'">{{books.description}}</p>
+                        <div class="books-buy-link">
+                            <ng-container *ngFor="let buyLink of books.buyLinks">
+                            
+                                <awc-button-link
+                                text={{buyLink.name}}
+                                hrefLink={{buyLink.url}}    
+                            >
+                            </awc-button-link>
+                            
+                           
+                        </ng-container>
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+              </awc-card>
+            </ng-container>
+          </div>
+        </awc-card>
+      </div>
+    </ng-container>
+  </div>
+</div>
