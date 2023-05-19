@@ -92,12 +92,48 @@ export class AmazonService {
       .pipe(
         map((itemData: any): any => {
           return {
-            data: itemData.results.map((item: any):any => {
+            data: itemData.results.map((item: any): any => {
               return {
                 id: item.list_name,
                 text: item.list_name,
               };
-            } ),
+            }),
+          };
+        })
+      );
+  }
+
+  getBestSellersTop5BooksDetails() {
+    const bestSellerTop5BooksUrl =
+      'https://api.nytimes.com/svc/books/v3/lists/overview.json';
+    let queryParams = new HttpParams();
+    queryParams = queryParams.append('api-key', environment.books_api_key);
+
+    return this.http
+      .get<any>(bestSellerTop5BooksUrl, { params: queryParams })
+      .pipe(
+        map((itemData: any): any => {
+          return {
+            results: itemData.results.lists.map((listItems: any): any => {
+              return {
+                id: listItems.list_id,
+                bestSeller: listItems.list_name,
+                books: listItems.books.map((bookItems: any): any => {
+                  return {
+                    id: bookItems.author,
+                    author: bookItems.author,
+                    bookImg: bookItems.book_image,
+                    publisher: bookItems.publisher,
+                    title: bookItems.title,
+                    description: bookItems.description,
+                    buyLinks: bookItems.buy_links,
+                    rank: bookItems.rank,
+                    createdDate: bookItems.created_date,
+                    price: bookItems.price,
+                  };
+                }),
+              };
+            }),
           };
         })
       );
